@@ -1,24 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
+import Unicorn from './components/Unicorn'
+import UnicronFunc from './components/UnicornFunctional'
 import './App.css';
 
 function App() {
+  const mRef = () => {
+    console.log("This is passing a method reference as a prop to Component - Unicorn")
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Unicorn click={mRef} />
+      {/* <UnicronFunc/> */}
     </div>
   );
 }
